@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số ngày trong một Tháng</title>
+</head>
+<body>
+    <input id="month" type="number" placeholder="Chọn tháng" >
+    <input id="count" type="button" onclick="calculate()" value="Tính">
+    <hr>
+    <p id="result"></p>
+   <script>
+    function calculate(){
+        let result = '';
+        let month = document.getElementById("month").value;
+        console.log(month);
+        if (month > 12 ){
+            result = ' Số bạn nhập không phải là tháng'
+        } 
+         else if (month == 2) {
+            result = 'Tháng có 28 hoặc 29 ngày'
+        }
+        else if (month% 2 == 0) {
+            console.log(month);
+            result = 'Tháng ' + month + ' có 30 ngày'
+        }
+        else  {
+            result = 'Tháng ' + month + ' có 31 ngày'
+        }
+    
+    document.getElementById("result").innerHTML = result
+    
+    
+    
+    }
+   </script>
+
+</body>
+</html>
