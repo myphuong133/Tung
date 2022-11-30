@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu giá hoa quả</title>
+</head>
+<body>
+    <select id="type">
+        <option value="20000">Ổi</option>
+        <option value="20000">Dưa hấu</option>
+        <option value="30000">Táo</option>
+        <option value="30000">Xoài</option>
+        <option value="40000">Cam</option>
+        <option value="50000">Măng</option>
+        <option value="40000">Chôm Chôm</option>
+
+    </select>
+    <input id="count" type="button" onclick="calculate()" value="Tính">
+    <hr>
+    <p id="result"></p>
+  
+   <script>
+    function calculate(){
+        let a         = document.getElementById("type");
+        let money     = a.value ;
+        let nameFruit = a.options[a.selectedIndex].text ; 
+        
+        document.getElementById("result").innerHTML = nameFruit + ' có giá ' + money + ' VNĐ/Kg'
+      
+    }
+   </script>
+</body>
+</html>
