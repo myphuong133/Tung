@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành sự kiện chuột</title>
+</head>
+<body>
+    <img id="image" style="position: relative;;width :300px;" src="https://i.kym-cdn.com/entries/icons/original/000/000/091/TrollFace.jpg"
+    >
+    <br>
+    <input type="button" onclick="moveRight()">
+    <script>
+          let img= document.getElementById('image');
+         let leftValue = 0;
+        function moveRight(){
+           leftValue += 10;
+            img.style.left = leftValue + 'px' ;
+            console.log(img.style.left);
+        }
+    </script>
+</body>
+</html>
