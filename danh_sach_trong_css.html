@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng quan về CSS</title>
+</head>
+<style>
+    ul {
+        list-style-image: url("sqpurple.gif");
+    }
+    li {
+	
+	list-style: none;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEX///8AAADAwMCOjo6Kioq/v7+QkJCHh4fDw8OLi4tXV1ejo6NaWlpiYmJVVVVcXFzMzMzYHzpCAAABcklEQVR4nO3cWW7CQBAEUCaELGS9/2kjPlCA9KfRZKrfO8GUqm0DFr3bAQAAAAAAAAAAAAAAAABwH2+zD3Bvx/E8+wj3dRwjO+IpYHTEzzGyI76Ps8fZR7mP34ChEb/GpcBB/RjX4lq8DRgX8ftPwDFeZx9qWw9FxLAWD1oMUEVs0GKDiAZ1NQ0iVg+N/exDbUuLCRq0WEVs0GKDiAZ1NQ1arB4aT7MPta0Gg6rFBFXEBi02iGhQV9OgxaYPjbCITVsMuxYbDGrTFsO+LzZtMey1TYO3xPsi4mH2obYU32H8dRh/L41/HrZsMOpzqQZXp8HVvWhwcfENVgGjGoy/i1YN+iy6Et8mVucaXF18g/EB4++iVYNRPxvGj6gGV6fB1VUBo/623nJE4wNGjWjLF6BRDVY7FaIarPZiRDV4chsxLmCD/TTXESMDXq5RCg14XmYWHLDBvrYGO/ca7E1ssPsSAAAAAAAAAAAAAAAAAOAf+QEWhAp4XoPcMAAAAABJRU5ErkJggg==");
+
+	background-size: 20px;
+}
+</style>
+<body>
+    <!--Sự khác biệt trong danh sách-->
+    <!--ul không có thứ tự còn ol thì có-->
+    <p>VD về danh sách có không có thứ tự</p>
+    <ul id="a">
+        <li>Coffe</li>
+        <li>Tea</li>
+        <li>Cola</li>
+    </ul>
+    <p>VD về danh sách có thứ tự </p>
+    <ol id="b">
+        <li>Coffe</li>
+        <li>Tea  </li>
+        <li>Cola </li>
+    </ol>
+    <ol id="b2" type="A">
+        <li>Coffe</li>
+        <li>Tea  </li>
+        <li>Cola </li>
+    </ol>
+    <hr>
+    <p>VD về thay đổi hình ảnh đánh dấu</p>
+    <ul id="c" style="list-style-image: url('rocket.svg) ;">
+        <li>Coffe</li>
+        <li>Tea</li>
+        <li>Cola</li>
+    </ul>
+
+    <div>
+        <ul id="d" ;>
+            <li>Coffe</li>
+            <li>Tea</li>
+            <li>Cola</li>
+        </ul>
+        <ul id="d1" ;>
+            <li>Coffe</li>
+            <li>Tea</li>
+            <li>Cola</li>
+        </ul>
+    </div>
+</body>
+</html>
