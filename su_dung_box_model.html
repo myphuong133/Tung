@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sử dụng Box 1</title>
+    <title>Bài tập sửu dụng Box model 1</title>
 </head>
 <style>
-    div {
-        
-        margin: 25px;
-        padding: 35px;
-        width: 200Px;
-        background-color: lightgreen;
-        border: 20px dashed indianred;
+    #fist {
+        position: absolute;
+        width: 30%;
+        height: 140px ;
+        background-color: green;
+        text-align: center;
+    }
+    #second {
+        color: green;
+        position: relative;
+        margin: 30px;
+        background-color: rgb(181, 180, 180);
+        border: 30px solid white;
     }
 </style>
 <body>
-    <div>
-       <p> Content</p>
+    <div id="fist">
+        <div id="second">
+            Web Programming
+        </div>
     </div>
 </body>
 </html>
