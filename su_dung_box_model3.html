@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành sử dụng Box Model 3</title>
+    <style>
+        #demo {
+            display: flex;
+            border: 6px solid black;
+            width: 250px;
+            border-radius: 6%;
+            float: left;
+        }
+        .d1 {
+            margin-left: 20px ;
+         
+            width: 100px;
+            height: 80px;
+            border-radius: 36%;
+            box-sizing: border-box;
+            box-shadow: 0 0 0 4px mediumslateblue;
+        }
+        .d2 {
+            box-sizing: border-box;
+            box-shadow: 0 0 0 4px blue;
+            width: 100px;
+            height: 80px;
+            border-radius: 36%;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="demo">
+        <div class="d1"></div>
+        <div class="d2"></div>
+    </div>
+</body>
+</html>
