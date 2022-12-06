@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ứng dụng Good fast cheap </title>
+</head>
+    <style>
+        table,th,td,tr {
+            border:1px solid black;
+            background-color: rgba(255, 255, 0, 0.078);
+            border-collapse: collapse;
+        }
+    </style>
+<body>
+    
+    <table>
+        
+        <tr>
+            <th colspan="2" style="background-color: red; color:white">Ứng dụng Good-Fast-Cheap</th>
+        </tr>
+        
+        <tr> 
+            <th>Good</th>
+            <th><input id="type1" type="radio" name="fistName" onclick="changeName(1)"></th>
+        </tr>
+        
+        <tr> 
+            <th>Fast</th>
+            <th><input id="type2" type="radio" name="secondName"  onclick="changeName(2)"></th>
+        </tr>
+        
+        <tr> 
+            <th>Cheap</th>
+            <th><input id="type3" type="radio" name="thirdName" onclick="changeName(3)"></th>
+        </tr>
+        
+    </table>
+    <script>
+        function changeName(a) {
+            if (a == 1){
+                document.getElementById('type1').name = 'diffName';
+                document.getElementById('type2').name = 'sameName';
+                document.getElementById('type3').name = 'sameName';
+            }
+            if (a == 2) {
+                document.getElementById('type1').name = 'same1Name';
+                document.getElementById('type2').name = 'diff1Name';
+                document.getElementById('type3').name = 'same1Name';
+            } 
+            if (a == 3) {
+                document.getElementById('type1').name = 'same2Name';
+                document.getElementById('type2').name = 'same2Name';
+                document.getElementById('type3').name = 'diff2Name';
+            }
+            //just for test
+            console.log(document.getElementById('type1').name);
+            console.log(document.getElementById('type2').name);
+            console.log(document.getElementById('type3').name);
+        }
+    </script>
+</body>
+<script>
+</script>
+</html>
