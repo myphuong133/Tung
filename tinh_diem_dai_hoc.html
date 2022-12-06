@@ -34,10 +34,10 @@
             <td>Khu vực</td>
             <td>
                 <select id="section">
-                    <option value="1">KV1</option>
-                    <option value="2nt">KV2-NT</option>
-                    <option value="2">KV2</option>
-                    <option value="3">KV3</option>
+                    <option value="0.75">KV1</option>
+                    <option value="0.5">KV2-NT</option>
+                    <option value="0.25">KV2</option>
+                    <option value="0">KV3</option>
                 </select>
             </td>
         </tr>
@@ -52,7 +52,9 @@
         let math    = parseInt(document.getElementById('math').value);
         let vietnam = parseInt(document.getElementById('vietnam').value);
         let english = parseInt(document.getElementById('english').value);
-        let section = parseInt(document.getElementById('section').value);
+        let section = +document.getElementById('section').value;
+        console.log(section);
+        console.log(typeof(section));
         let total = math + vietnam + english + section
         console.log(total);
         
