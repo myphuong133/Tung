@@ -49,11 +49,11 @@
 
     <script>
     function calculate(){
-        let math = document.getElementById('math').value;
-        let vietnam = document.getElementById('vietnam').value;
-        let english = document.getElementById('english').value;
-        
-        let total = math + vietnam + english 
+        let math    = parseInt(document.getElementById('math').value);
+        let vietnam = parseInt(document.getElementById('vietnam').value);
+        let english = parseInt(document.getElementById('english').value);
+        let section = parseInt(document.getElementById('section').value);
+        let total = math + vietnam + english + section
         console.log(total);
         
         
