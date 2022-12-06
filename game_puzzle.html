@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        box-shadow: 4px 4px 9px  rgb(119, 0, 255);
+    }
+</style>
+<body>
+    <img onclick="change1()" id="Pic1" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg" >
+    <br>
+    <img onclick="change2()" id="Pic2" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg">
+    <br>
+    <img onclick="change3()" id="Pic3" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg">
+    <br>
+    <img onclick="change4()" id="Pic4" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg">
+    <br>
+    <img onclick="change5()" id="Pic5" src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg">
+    <script>
+        let flag1 = 1;
+        let flag2 = 3;
+        let flag3 = 0;
+        let flag4 = 2;
+        let flag5 = 4;
+        var check1 = true;
+        var check2 = false;
+        let check3 = false;
+        let check4 = false;
+        let check5 = false;
+        function change1(){
+            
+            if (flag1 == 0){
+                document.getElementById("Pic1").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg"
+                flag1 = 1;
+                check1 = true;
+            }
+            else if (flag1 == 1){
+                document.getElementById("Pic1").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg"
+                flag1 = 2;
+                check1 = false;
+            }
+            else if (flag1 == 2){
+                flag1 = 3;
+                check1 = false;
+                document.getElementById("Pic1").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg"
+            }
+            else if (flag1 == 3){
+                flag1 = 4;
+                check1 = false;
+                document.getElementById("Pic1").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg"
+            }
+            else if (flag1 == 4){
+                flag1 = 0
+                check1 = false;
+                document.getElementById("Pic1").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg"
+            }
+           
+           check();
+        
+          
+        }
+    function change2(){
+        if (flag2 == 0){
+                flag2 = 1;
+                check2 = false;
+            document.getElementById("Pic2").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg"
+            }
+            else if (flag2 == 1){
+                document.getElementById("Pic2").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg"
+                flag2 = 2
+                check2 = true;
+            }
+            else if (flag2 == 2){
+                flag2 = 3
+                document.getElementById("Pic2").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg"
+                check2 = false;
+            }
+            else if (flag2 == 3){
+                flag2 = 4
+                document.getElementById("Pic2").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg";
+                check2 = false;
+            }
+            else if (flag2 == 4){
+                flag2 = 0
+                document.getElementById("Pic2").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg";
+                check2 = false;
+            }
+            check();
+   
+        }
+    function change3(){
+        if (flag3 == 0){
+                flag3 = 1;
+            document.getElementById("Pic3").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg";
+            check3 = false;
+            }
+            else if (flag3 == 1){
+                document.getElementById("Pic3").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg";
+                check3 = false;
+                flag3 = 2
+            }
+            else if (flag3 == 2){
+                flag3 = 3
+                document.getElementById("Pic3").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg";
+                check3 = true;
+            }
+            else if (flag3 == 3){
+                flag3 = 4
+                document.getElementById("Pic3").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg";
+                check3 = false;
+            }
+            else if (flag3 == 4){
+                flag3 = 0
+                document.getElementById("Pic3").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg";
+                check3 = false;
+            }
+            check()
+    }
+    function change4(){
+        if (flag4 == 0){
+                flag4 = 1;
+            document.getElementById("Pic4").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg";
+            check4 = false;
+            }
+            else if (flag4 == 1){
+                document.getElementById("Pic4").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg";
+                check4 = false;
+                flag4 = 2
+            }
+            else if (flag4 == 2){
+                flag4 = 3
+                document.getElementById("Pic4").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg";
+                check4 = false;
+            }
+            else if (flag4 == 3){
+                flag4 = 4
+                document.getElementById("Pic4").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg";
+                check4 = true;
+            }
+            else if (flag4 == 4){
+                flag4 = 0
+                document.getElementById("Pic4").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg";
+                check4 = false;
+            }
+            check()
+    }
+    function change5(){
+        if (flag5 == 0){
+                flag5 = 1;
+            document.getElementById("Pic5").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg";
+            check5 = false;
+            }
+            else if (flag5 == 1){
+                document.getElementById("Pic5").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg";
+                check5 = false;
+                flag5 = 2
+            }
+            else if (flag5 == 2){
+                flag5 = 3
+                document.getElementById("Pic5").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg";
+                check5 = false;
+            }
+            else if (flag5 == 3){
+                flag5 = 4
+                document.getElementById("Pic5").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg";
+                check5 = false;
+            }
+            else if (flag5 == 4){
+                flag5 = 0
+                document.getElementById("Pic5").src="http://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg";
+                check5 = true;
+            }
+            check()
+    }
+
+
+
+    function check(){
+        console.log(check1);
+        console.log(check2);
+        console.log(check3);
+        console.log(check4);
+        console.log(check5);
+        if (check1 == true){
+            if (check2 == true){
+               if (check3 == true) {
+                    if (check4 == true) {
+                       if (check5 == true) {
+                                document.getSelection
+                       }
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</body>
+</html>
