@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm đại học khối D</title>
+    <style>
+        table{
+            border: 1px solid;
+        }
+        table, td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tính điểm đại học khối D</h2>
+    <table>
+        <tr> 
+            <td>Môn Toán</td>
+            <td><input id="math" type="number"></td>
+        </tr>
+       
+        <tr> 
+            <td>Môn Văn</td>
+            <td><input id="vietnam" type="number"></td>
+        </tr>
+        <tr> 
+            <td>Môn Anh</td>
+            <td><input id="english" type="number"></td>
+        </tr>
+        <tr>
+            <td>Khu vực</td>
+            <td>
+                <select id="section">
+                    <option value="1">KV1</option>
+                    <option value="2nt">KV2-NT</option>
+                    <option value="2">KV2</option>
+                    <option value="3">KV3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+
+            <td><input type="button" value="Tính điểm" onclick="calculate()"></td>
+        </tr>
+    </table>
+
+    <script>
+    function calculate(){
+        let math = document.getElementById('math').value;
+        let vietnam = document.getElementById('vietnam').value;
+        let english = document.getElementById('english').value;
+        
+        let total = math + vietnam + english 
+        console.log(total);
+        
+        
+    }
+    </script>
+</body>
+</html>
