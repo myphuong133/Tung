@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm giá trị lớn nhất trong mảng</title>
+</head>
+<link rel="stylesheet"  >
+<body>
+    <script>
+        let randomNumber;
+        let arrayNumber = [];
+        let index = 0;
+        for(let i = 0; i <10; i++){
+        randomNumber = Math.floor(Math.random()*100)  ;
+        arrayNumber[i] = randomNumber;
+        console.log(arrayNumber)
+        }
+        let maxNumber = arrayNumber[0]
+        for(let j = 0 ; j<arrayNumber.length ; j++ ){
+            if ( maxNumber < arrayNumber[j]) {
+                maxNumber = arrayNumber[j] ;
+                index = j;
+            }
+        }
+        alert("max: " + maxNumber + "   at position " + index )
+    </script>
+</body>
+</html>
