@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm kiểm tra từ đối xứng</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt();
+        let fist = '';
+        let second = '';
+        function isPalindrome(a) {
+            
+                
+                for (let i = 0; i < a.length; i++) {
+                    if (fist.length < (a.length / 2)) {
+                        fist += a[i];
+                        second += a[(a.length - 1) - i];
+                    }
+
+                }
+               
+    
+            
+            console.log(fist);
+            if (fist==second) {
+                alert('true');
+            }
+            else {
+                alert('false');
+            }
+        
+        
+            
+        }
+        isPalindrome(a);
+
+    </script>
+</body>
+
+</html>
