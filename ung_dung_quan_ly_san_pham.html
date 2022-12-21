@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h2>Ứng dụng quản lý sản phẩm </h2>
+  <p id="ds"><br></p>
+  <button type="button" onclick="add(arrayItem)">Thêm</button>
+  <button type="button" onclick="edit(arraytem)">Sửa</button>
+  <button type="button" onclick="delete1(arrayItem)">Xóa</button>
+
+  <script>
+    let arrayItem = ['Sản phầm 1','Sản phầm 2','Sản phầm 3','Sản phầm 4'];
+
+    function write(arrayitem){
+        let result="";
+        for (let i=0;i<arrayitem.length;i++){
+            result += (i+1) + '. ' + arrayitem[i] + '<br>' 
+        }
+        document.getElementById('ds').innerHTML = result;
+    }
+    function add(arrayItem){
+        let newItem = prompt('What element');
+        arrayItem.push(newItem);
+        write(arrayItem)
+    }
+    function edit(arrayItem){
+        let index = prompt('chọn vị trí bạn muốn sửa');
+        let newItem = prompt('what element');
+        
+        arrayItem[index-1] = newItem;
+        write(arrayItem);
+    }
+    function delete1(arrayItem){
+      let index = prompt('Nhập số thứ tự mặt hàng bạn muốn xoá');
+      arrayItem.splice(index-1,1);
+      write(arrayItem);
+    }
+    
+
+    write(arrayItem)
+  </script>
+</body>
+</html>
